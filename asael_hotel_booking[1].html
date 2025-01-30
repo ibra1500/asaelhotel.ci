@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asaël Hôtel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4b400;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        #about ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #about li {
+            background: #f0f0f0;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        form label {
+            margin: 0.5rem 0 0.2rem;
+        }
+        form input, form select, form button {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        form button {
+            background: #f4b400;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #d39300;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Asaël Hôtel</h1>
+        <p>Vous êtes chez vous.</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Nos Offres</h2>
+            <ul>
+                <li>Bar et Wi-Fi</li>
+                <li>Chaudière et TV connectée</li>
+                <li>Parking sécurisé</li>
+                <li>Chambres climatisées</li>
+            </ul>
+        </section>
+
+        <section id="booking">
+            <h2>Réservez votre chambre</h2>
+            <form action="reservation.php" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Date d'arrivée :</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="room">Type de chambre :</label>
+                <select id="room" name="room">
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                </select>
+
+                <button type="submit">Réserver</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contactez-nous : (+225) 07 47 570 785</p>
+    </footer>
+</body>
+</html>
